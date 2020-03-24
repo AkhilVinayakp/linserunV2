@@ -15,13 +15,16 @@ function createWindow(): BrowserWindow {
   win = new BrowserWindow({
     x: 0,
     y: 0,
-    width: 1200,
+    width: size.width,
     height: size.height,
+    //resizable:false,
+    fullscreen:false,
     webPreferences: {
       nodeIntegration: true,
       allowRunningInsecureContent: (serve) ? true : false,
      // sandbox: true,
     //contextIsolation: true
+    
     },
   });
 
