@@ -1,0 +1,32 @@
+.container-fluid{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  nav{
+    margin: 0;
+    border: 0;
+    padding-left: 0;
+
+    .act_bar{
+      padding: 10px 10px 10px 10px;
+
+      .act_select{
+
+        padding:3px;
+
+      }
+      .pr_tag{
+        padding:19px;
+        strong{
+          color: red;
+          font-size: 22px;
+            span{
+              color:white;
+            }
+        }
+      }
+
+    }
+
+  }
+}
