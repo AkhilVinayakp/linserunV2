@@ -1,15 +1,15 @@
 <div class="container-fluid">
     <nav class="navbar navbar-dark bg-dark">
         <form class="act_bar form-inline">
-            <div class="act_select form-group">
-              <select class="form-control" [(ngModel)]="action_selected">
+            <div class="act_select form-group">  
+              <select class="form-control" [(ngModel)]="action_selected"  [ngModelOptions]="{standalone:true}" (change)="action_changed()">
                 <option>RUN</option>
                 <option>SEARCH</option>
               </select>
             </div>
 
             <div class="input-group">
-                    <input [(ng)] class="cmd_ser_text form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <input [(ngModel)]="cmd_ser_text" [ngModelOptions]="{standalone:true}" (keyup)="text_changed()" class="cmd_ser_text form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
                    <!--
                     <div class="input-group-append">
                         <button class="btn btn-outline-success " type="submit">Search</button>
@@ -26,4 +26,7 @@
         </form>
        
       </nav>
+      {{cmd_ser_text}}
+      <br>
+      {{action_selected}}
 </div>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
