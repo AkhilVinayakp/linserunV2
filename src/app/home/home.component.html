@@ -26,7 +26,14 @@
         </form>
        
       </nav>
-      {{cmd_ser_text}}
-      <br>
-      {{action_selected}}
+
+
+
+
+      <div *ngIf="data_api.out_flag==1">
+        {{cmd_ser_text}}
+        <br>
+        {{action_selected}}
+      </div>
+     
 </div>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
