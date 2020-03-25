@@ -9,11 +9,23 @@ import { DataService } from '../data.service';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private electron_window:ElectronService, private data:DataService) { }
+  constructor(private electron_window:ElectronService, private data:DataService) { 
+
+    this.placeholde_changer();
+  }
 
   ngOnInit(): void { }
+  placeholde_changer(){
 
+    if(this.action_selected=="RUN"){
+      this.placeh_text="command here";
+    }
+    else{
+      this.placeh_text="search now";
+    }
+  }
   cmd_ser_text:any;
+  placeh_text:any;
   action_selected="RUN";
   close_window(){
     this.electron_window.window.close();
@@ -24,6 +36,8 @@ export class HomeComponent implements OnInit {
   }
   action_changed(){
     console.log(this.action_selected);
+    this.placeholde_changer();
+
   }
   text_changed(){
     console.log(this.cmd_ser_text);

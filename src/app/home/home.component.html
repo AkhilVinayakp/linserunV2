@@ -9,7 +9,7 @@
             </div>
 
             <div class="input-group">
-                    <input [(ngModel)]="cmd_ser_text" [ngModelOptions]="{standalone:true}" (keyup)="text_changed()" class="cmd_ser_text form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <input [(ngModel)]="cmd_ser_text" [ngModelOptions]="{standalone:true}" (keyup)="text_changed()" class="cmd_ser_text form-control mr-sm-2" type="search"[placeholder]="placeh_text" aria-label="Search">
                    <!--
                     <div class="input-group-append">
                         <button class="btn btn-outline-success " type="submit">Search</button>
