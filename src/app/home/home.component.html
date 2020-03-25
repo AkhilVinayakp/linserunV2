@@ -2,17 +2,19 @@
     <nav class="navbar navbar-dark bg-dark">
         <form class="act_bar form-inline">
             <div class="act_select form-group">
-              <select class="form-control">
+              <select class="form-control" [(ngModel)]="action_selected">
                 <option>RUN</option>
                 <option>SEARCH</option>
               </select>
             </div>
 
             <div class="input-group">
-                    <input class="cmd_ser_text form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <input [(ng)] class="cmd_ser_text form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                   <!--
                     <div class="input-group-append">
                         <button class="btn btn-outline-success " type="submit">Search</button>
                     </div>
+                   -->
              </div>
              <div class="pr_tag">
                     <strong>LINSERUN<span>Debain</span></strong>
